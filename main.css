@@ -1,0 +1,11 @@
+.plateau{
+  width: 800px;
+  height: 800px;
+  background-color: #318CE7;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  border: solid 1px;
+  border-color: #00308F;
+}
