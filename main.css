@@ -1,25 +1,27 @@
-/* body{
-  background-color: #D7C2AC;
+body{
+  background-color:	#1b2124;
+  margin: 0;
+  padding: 0;
 }
 
 #plateau{
-  background-color: #4B3A30;
   position: relative;
-} */
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+}
 
 /* :root {
    --pixel-size: 2;
 } */
-/*
+
 #pion{
   width: 41px;
   overflow: hidden;
-  background-color: blue;
   position: absolute;
   z-index: 100;
-} */
+}
 
-/* .pion_naruto{
+.pion_naruto{
   animation: animate 1s steps(9) infinite;
 }
 
@@ -30,4 +32,4 @@
    to {
       transform: translate3d(-100%,0,0)
    }
-} */
+}

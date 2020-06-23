@@ -18,12 +18,12 @@ for (var i = 0; i < H_GRID; i++) {
     block.style.display = "flex";
     block.style.position = "absolute";
 
-    if (random100() > 90) {
-      block.style.backgroundColor = "#876D5A";
+    if (random100() > 80) {
+      block.style.backgroundColor = "#edb870";
       block.traverser = false;
     }
     else {
-      block.style.backgroundColor = "#4B3A30";
+      block.style.backgroundColor = "#fdf4af";
       block.traverser = true;
   }
     block.style.marginLeft = (i * GRID_SIZE).toString() + "px";
