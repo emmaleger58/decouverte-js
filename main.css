@@ -10,26 +10,21 @@ body{
   margin-top: 2.5%;
 }
 
-/* :root {
-   --pixel-size: 2;
-} */
-
 #pion{
-  width: 41px;
-  overflow: hidden;
+  /* width: 40px;
+  height: 80px; */
   position: absolute;
-  z-index: 100;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-image: url(sprite_sheet/spritesheet.png);
 }
 
-.pion_naruto{
-  animation: animate 1s steps(9) infinite;
-}
-
-@keyframes animate {
+/* @keyframes animate {
    from {
       transform: translate3d(0px,0,0)
    }
    to {
       transform: translate3d(-100%,0,0)
    }
-}
+} */

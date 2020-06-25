@@ -13,9 +13,6 @@ for (var i = 0; i < H_GRID; i++) {
       ennemi.style.backgroundColor = "red";
       ennemi.traverser = false;
     }
-    else {
-      ennemi.traverser = true;
-  }
     ennemi.style.marginLeft = (i * GRID_SIZE).toString() + "px";
     ennemi.style.marginTop = (j * GRID_SIZE).toString() + "px";
 
