@@ -19,11 +19,11 @@ for (var i = 0; i < H_GRID; i++) {
     block.style.position = "absolute";
 
     if (random100() > 80) {
-      block.style.backgroundColor = "#edb870";
+      block.style.backgroundColor = "#C0809C";
       block.traverser = false;
     }
     else {
-      block.style.backgroundColor = "#fdf4af";
+      block.style.backgroundColor = "#EDCEE5";
       block.traverser = true;
   }
     block.style.marginLeft = (i * GRID_SIZE).toString() + "px";

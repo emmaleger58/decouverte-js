@@ -1,4 +1,7 @@
 var vilainListe = [];
+var widthOfSpriteVilain = 150;
+var widthOfEachVilain = 37.5;
+var heightOfEachVilain = 40;
 
 for (var i = 0; i < 10; i++) {
   let vilain = document.createElement('div');
@@ -13,14 +16,14 @@ for (var i = 0; i < 10; i++) {
   vilain.vilainY = y;
   vilain.direction = "right";
   vilain.id = "vilain" + String(i);
-  vilain.style.width = GRID_SIZE + "px";
-  vilain.style.height = GRID_SIZE + "px";
+  vilain.style.width = widthOfEachVilain + "px";
+  vilain.style.height = heightOfEachVilain + "px";
   vilain.style.position = "absolute";
-  vilain.style.backgroundImage = "url(sprite_sheet/dog-removebgpng.png)";
-  vilain.style.backgroundSize = "contain";
+  vilain.style.backgroundImage = "url(sprite_sheet/dog-removebgpng1.png)";
   vilain.style.left = String(vilain.vilainX * GRID_SIZE) + "px";
   vilain.style.top = String(vilain.vilainY * GRID_SIZE) + "px";
   vilain.style.zIndex = "95";
+  vilain.id = "vilain";
   plateau.appendChild(vilain);
   vilainListe.push(vilain);
 }
@@ -65,18 +68,22 @@ function loop() {
 
       if (random < 25) {
         direction = "left";
+        startAnimationVilainGauche();
       }
 
       if (random >= 25 && random < 50) {
         direction = "right";
+        startAnimationVilainDroite();
       }
 
       if (random >= 50 && random < 75) {
         direction = "up";
+        startAnimationVilainHaut();
       }
 
       if (random > 75) {
         direction = "down";
+        startAnimationVilainBas();
       }
 
       vilain.vilainX = vilainX;
@@ -94,98 +101,3 @@ function loop() {
 }
 
 window.requestAnimationFrame(loop);
-
-
-
-
-var animationInterval;
-var spriteSheet = document.querySelector("vilain");
-var widthOfSpriteSheet = 230;
-var widthOfEachSprite = 57;
-var heightOfSpriteSheet = 305;
-var heightOfEachSprite = 61;
-var spriteScaleWidth = 0.70;
-var spriteScaleHeight = 0.66;
-
-
-function stopAnimation() {
-  clearInterval(animationInterval);
-}
-
-function startAnimationbas() {
-  stopAnimation();
-  var position = widthOfEachSprite; //start position for the image
-  const speed = 110; //in millisecond(ms)
-  const diff = widthOfEachSprite; //difference between two sprites
-
-  animationInterval = setInterval(() => {
-    spriteSheet.style.backgroundPosition = `-${position}px 0px`;
-
-    if (position < widthOfSpriteSheet) {
-      position = position + diff;
-    } else {
-      //increment the position by the width of each sprite each time
-      position = widthOfEachSprite;
-    }
-    //reset the position to show first sprite after the last one
-  }, speed);
-}
-
-
-function startAnimationhaut() {
-  stopAnimation();
-  var position = widthOfEachSprite; //start position for the image
-  const speed = 110; //in millisecond(ms)
-  const diff = widthOfEachSprite; //difference between two sprites
-
-  animationInterval = setInterval(() => {
-    spriteSheet.style.backgroundPosition = `-${position}px 40px`;
-
-    if (position < widthOfSpriteSheet) {
-      position = position + diff;
-    } else {
-      //increment the position by the width of each sprite each time
-      position = widthOfEachSprite;
-    }
-    //reset the position to show first sprite after the last one
-  }, speed);
-}
-
-
-function startAnimationgauche() {
-  stopAnimation();
-  var position = widthOfEachSprite; //start position for the image
-  const speed = 110; //in millisecond(ms)
-  const diff = widthOfEachSprite; //difference between two sprites
-
-  animationInterval = setInterval(() => {
-    spriteSheet.style.backgroundPosition = `-${position}px 80px`;
-
-    if (position < widthOfSpriteSheet) {
-      position = position + diff;
-    } else {
-      //increment the position by the width of each sprite each time
-      position = widthOfEachSprite;
-    }
-    //reset the position to show first sprite after the last one
-  }, speed);
-}
-
-function startAnimationdroite() {
-  stopAnimation();
-  var position = widthOfEachSprite; //start position for the image
-  const speed = 110; //in millisecond(ms)
-  const diff = widthOfEachSprite; //difference between two sprites
-
-  animationInterval = setInterval(() => {
-    spriteSheet.style.backgroundPosition = `-${position}px 120px`;
-
-    if (position < widthOfSpriteSheet) {
-      position = position + diff;
-    } else {
-      //increment the position by the width of each sprite each time
-      position = widthOfEachSprite;
-    }
-    //reset the position to show first sprite after the last one
-  }, speed);
-}

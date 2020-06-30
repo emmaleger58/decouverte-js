@@ -33,7 +33,7 @@ switch(keyCode){
             break;
 
   case 32 :
-    creatBomb();
+    createBomb();
     break;
   }
 
