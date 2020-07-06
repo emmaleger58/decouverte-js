@@ -21,11 +21,10 @@ for (var i = 0; i < H_GRID; i++) {
     if (random100() > 80) {
       block.style.backgroundColor = "#C0809C";
       block.traverser = false;
-    }
-    else {
+    } else {
       block.style.backgroundColor = "#EDCEE5";
       block.traverser = true;
-  }
+    }
     block.style.marginLeft = (i * GRID_SIZE).toString() + "px";
     block.style.marginTop = (j * GRID_SIZE).toString() + "px";
 
@@ -35,5 +34,5 @@ for (var i = 0; i < H_GRID; i++) {
 }
 
 function random100() {
-return Math.floor(Math.random() * 100);
+  return Math.floor(Math.random() * 100);
 }

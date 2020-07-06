@@ -7,7 +7,7 @@ for (var i = 0; i < 10; i++) {
   let vilain = document.createElement('div');
   let x = 0;
   let y = 0;
-  while (!blockGrid[x][y].traverser || (x === 0 && y ===0)) {
+  while (!blockGrid[x][y].traverser || (x === 0 && y === 0)) {
     x = Math.floor(Math.random() * (H_GRID));
     y = Math.floor(Math.random() * (V_GRID));
   }
@@ -44,22 +44,22 @@ function loop() {
             vilainY--;
             break;
           }
-        case "right":
-          if (vilainX < H_GRID - 1 && blockGrid[vilainX + 1][vilainY].traverser) {
-            vilainX++;
-            break;
-          }
-        case "up":
-          console.log(vilainY)
-          if (vilainY < V_GRID - 1 && blockGrid[vilainX][vilainY + 1].traverser){
-            vilainY++;
-            break;
-          }
-        case "down":
-          if (vilainX > 0 && blockGrid[vilainX - 1][vilainY].traverser) {
-            vilainX--;
-            break;
-          }
+          case "right":
+            if (vilainX < H_GRID - 1 && blockGrid[vilainX + 1][vilainY].traverser) {
+              vilainX++;
+              break;
+            }
+            case "up":
+              console.log(vilainY)
+              if (vilainY < V_GRID - 1 && blockGrid[vilainX][vilainY + 1].traverser) {
+                vilainY++;
+                break;
+              }
+              case "down":
+                if (vilainX > 0 && blockGrid[vilainX - 1][vilainY].traverser) {
+                  vilainX--;
+                  break;
+                }
       }
       vilain.style.left = String(vilainX * GRID_SIZE) + 'px';
       vilain.style.top = String(vilainY * GRID_SIZE) + 'px';
@@ -89,7 +89,7 @@ function loop() {
       vilain.vilainX = vilainX;
       vilain.vilainY = vilainY;
       vilain.direction = direction;
-      blockGrid[vilainX][vilainY].traverser = false ;
+      blockGrid[vilainX][vilainY].traverser = false;
     }
     frame = 0;
   }

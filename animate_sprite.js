@@ -102,7 +102,7 @@ function startAnimationVilainBas() {
   const diff = widthOfEachVilain; //difference between two sprites
 
   animationIntervalVilain = setInterval(() => {
-   spriteSheetVilain.style.backgroundPosition = `-${position}px 0px`;
+    spriteSheetVilain.style.backgroundPosition = `-${position}px 0px`;
 
     if (position < widthOfSpriteVilain) {
       position = position + diff;
@@ -123,7 +123,7 @@ function startAnimationVilainHaut() {
   const diff = widthOfEachVilain; //difference between two sprites
 
   animationIntervalVilain = setInterval(() => {
-  spriteSheetVilain.style.backgroundPosition = `-${position}px 0px`;
+    spriteSheetVilain.style.backgroundPosition = `-${position}px 0px`;
 
     if (position < widthOfSpriteVilain) {
       position = position + diff;
@@ -144,7 +144,7 @@ function startAnimationVilainGauche() {
   const diff = widthOfEachVilain; //difference between two sprites
 
   animationIntervalVilain = setInterval(() => {
-   spriteSheetVilain.style.backgroundPosition = `-${position}px 120px`;
+    spriteSheetVilain.style.backgroundPosition = `-${position}px 120px`;
 
     if (position < widthOfSpriteVilain) {
       position = position + diff;
@@ -164,7 +164,7 @@ function startAnimationVilainDroite() {
   const diff = widthOfEachVilain; //difference between two sprites
 
   animationIntervalVilain = setInterval(() => {
-   spriteSheetVilain.style.backgroundPosition = `-${position}px 40px`;
+    spriteSheetVilain.style.backgroundPosition = `-${position}px 40px`;
 
     if (position < widthOfSpriteVilain) {
       position = position + diff;

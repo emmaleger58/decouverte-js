@@ -1,16 +1,16 @@
-body{
-  background-color:	#F7E7DE;
+body {
+  background-color: #F7E7DE;
   margin: 0;
   padding: 0;
 }
 
-#plateau{
+#plateau {
   margin-left: 2.5%;
   margin-top: 2.5%;
   position: relative;
 }
 
-#pion{
+#pion {
   width: 32px;
   height: 32px;
   position: absolute;
